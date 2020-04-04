@@ -1,6 +1,6 @@
 ﻿using MvvmCross.Core;
-using MvvmCross.Platforms.Uap.Core;
 using MvvmCross.Platforms.Uap.Views;
+using SoundChecker.Core;
 
 namespace SoundChecker
 {
@@ -13,7 +13,7 @@ namespace SoundChecker
 
         protected override void RegisterSetup()
         {
-            this.RegisterSetupType<MvxWindowsSetup<Core.CoreApp>>();
+            this.RegisterSetupType<Setup<CoreApp>>();
         }
     }
 }
