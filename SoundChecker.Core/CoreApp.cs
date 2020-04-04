@@ -1,4 +1,5 @@
 ﻿using MvvmCross.ViewModels;
+using SoundChecker.Core.ViewModels;
 
 namespace SoundChecker.Core
 {
@@ -6,6 +7,7 @@ namespace SoundChecker.Core
     {
         public override void Initialize()
         {
+            RegisterAppStart<MainPageViewModel>();
         }
     }
 }
