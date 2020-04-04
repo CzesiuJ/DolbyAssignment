@@ -12,8 +12,6 @@
     <Folder Include="Models\Headset\" />
     <Folder Include="Models\Speaker\" />
     <Folder Include="Services\Headset\" />
-    <Folder Include="Services\Speaker\" />
-    <Folder Include="ViewModels\" />
   </ItemGroup>
 
 </Project>

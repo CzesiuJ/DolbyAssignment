@@ -163,7 +163,16 @@
       <Version>6.4.2</Version>
     </PackageReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\SoundChecker.Core\SoundChecker.Core.csproj">
+      <Project>{fc530118-5434-4b75-9333-c0b61e9fd46b}</Project>
+      <Name>SoundChecker.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SoundChecker.Uwp.Core\SoundChecker.Uwp.Core.csproj">
+      <Project>{c51f808d-5764-4780-af27-bae70564ca28}</Project>
+      <Name>SoundChecker.Uwp.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>
