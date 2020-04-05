@@ -1,6 +1,6 @@
 ﻿namespace SoundChecker.Uwp.Core.Services.Speaker
 {
-    public interface ISpeakerConfiguration
+    public interface ISpeakerConfiguration : IDolbyAvailabiltyChecker
     {
     }
 }

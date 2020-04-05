@@ -20,15 +20,21 @@ namespace SoundChecker
             Container.RegisterType<IHeadsetConfiguration, HeadsetConfiguration>();
             Container.RegisterType<ISpeakerConfiguration, SpeakerConfiguration>();
             Container.RegisterType<ISoundSettingsLauncher, SettingsLauncher>();
-            Container.RegisterType<IDeviceManager, DeviceManager>(new ContainerControlledLifetimeManager());
+            Container.RegisterType<IAudioDeviceManager, AudioDeviceManager>(new ContainerControlledLifetimeManager());
             base.ConfigureContainer();
         }
 
         protected override async Task OnLaunchApplicationAsync(LaunchActivatedEventArgs args)
         {
-            var deviceManager = Container.Resolve<IDeviceManager>();
-            var devices = await deviceManager.GetAvailableDevicesAsync();
+            await IntializeAudioDevicesAsync();
+
             NavigationService.Navigate("Main", null);
+        }
+
+        private async Task IntializeAudioDevicesAsync()
+        {
+            var audioDeviceManager = Container.Resolve<IAudioDeviceManager>();
+            await audioDeviceManager.InitializeAudioDeviceAsync();
         }
     }
 }

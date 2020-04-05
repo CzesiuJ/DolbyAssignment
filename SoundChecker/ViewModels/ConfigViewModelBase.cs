@@ -1,7 +1,9 @@
-﻿using Prism.Windows.Mvvm;
+﻿using System.Windows.Input;
+using Prism.Commands;
+using Prism.Windows.Mvvm;
 using SoundChecker.Uwp.Core.Services;
 
-namespace SoundChecker.Core.ViewModels
+namespace SoundChecker.ViewModels
 {
     public abstract class ConfigViewModelBase : ViewModelBase
     {
@@ -19,10 +21,11 @@ namespace SoundChecker.Core.ViewModels
             set => SetProperty(ref _isAtmosReadyToUse, value);
         }
 
-        // public IMvxCommand LaunchSettingsCommand => new MvxCommand(LaunchSettings);
+        public ICommand LaunchSettingsCommand => new DelegateCommand(LaunchSettings);
 
-        private void LaunchSettings()
+        private async void LaunchSettings()
         {
+            await SoundSettingsLauncher.LaunchSoundSettingsAsync();
         }
     }
 }

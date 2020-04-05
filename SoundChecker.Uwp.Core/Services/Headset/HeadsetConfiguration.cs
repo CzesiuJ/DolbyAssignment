@@ -1,12 +1,13 @@
-﻿using System;
-using System.Threading.Tasks;
+﻿using Windows.Media.Audio;
 
 namespace SoundChecker.Uwp.Core.Services.Headset
 {
-    public class HeadsetConfiguration : IHeadsetConfiguration
+    public class HeadsetConfiguration : ConfigurationBase, IHeadsetConfiguration
     {
-        public async Task InitializeAsync()
+        public HeadsetConfiguration(IAudioDeviceManager deviceManager) : base(deviceManager)
         {
         }
+
+        protected override string SpatialSoundSystemId => SpatialAudioFormatSubtype.DolbyAtmosForHeadphones;
     }
 }

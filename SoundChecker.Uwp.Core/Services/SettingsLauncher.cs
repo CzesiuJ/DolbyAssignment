@@ -1,12 +1,13 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Threading.Tasks;
 
 namespace SoundChecker.Uwp.Core.Services
 {
     public class SettingsLauncher : ISoundSettingsLauncher
     {
-        public Task LaunchSoundSettingsAsync()
+        public async Task LaunchSoundSettingsAsync()
         {
-            return Task.CompletedTask;
+            await Windows.System.Launcher.LaunchUriAsync(new Uri("ms-settings:easeofaccess-audio"));
         }
     }
 }

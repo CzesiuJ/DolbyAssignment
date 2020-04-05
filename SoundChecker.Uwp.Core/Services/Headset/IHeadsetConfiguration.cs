@@ -2,8 +2,7 @@
 
 namespace SoundChecker.Uwp.Core.Services.Headset
 {
-    public interface IHeadsetConfiguration
+    public interface IHeadsetConfiguration : IDolbyAvailabiltyChecker
     {
-        Task InitializeAsync();
     }
 }

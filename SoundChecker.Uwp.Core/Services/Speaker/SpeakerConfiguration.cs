@@ -2,10 +2,12 @@
 
 namespace SoundChecker.Uwp.Core.Services.Speaker
 {
-    public class SpeakerConfiguration : ISpeakerConfiguration
+    public class SpeakerConfiguration : ConfigurationBase, ISpeakerConfiguration
     {
-        public SpeakerConfiguration()
+        public SpeakerConfiguration(IAudioDeviceManager deviceManager) : base(deviceManager)
         {
         }
+
+        protected override string SpatialSoundSystemId => SpatialAudioFormatSubtype.DolbyAtmosForHomeTheater;
     }
 }

@@ -28,7 +28,7 @@
         </Grid.RowDefinitions>
         <TextBlock Grid.Row="0" Style="{StaticResource DefaultHeaderStyle}" x:Uid="Speakers" />
         <controls:ReadyToUseDisplayPanel Grid.Row="1" Visibility="{x:Bind ViewModel.IsAtmosReadyToUse, Mode=OneWay}" />
-        <Button Grid.Row="1" x:Uid="Setup" Style="{StaticResource SetupButtonStyle}" Visibility="{x:Bind ViewModel.IsAtmosReadyToUse, Mode=OneWay, Converter={StaticResource InvertedBooleanToVisibilityConverter}}" />
+        <Button Grid.Row="1" x:Uid="Setup" Command="{x:Bind ViewModel.LaunchSettingsCommand, Mode=OneWay}"  Style="{StaticResource SetupButtonStyle}" Visibility="{x:Bind ViewModel.IsAtmosReadyToUse, Mode=OneWay, Converter={StaticResource InvertedBooleanToVisibilityConverter}}" />
         <TextBlock Grid.Row="2" Style="{StaticResource DefaultDescriptionStyle}" x:Uid="SpeakersDescription" />
     </Grid>
 </UserControl>
