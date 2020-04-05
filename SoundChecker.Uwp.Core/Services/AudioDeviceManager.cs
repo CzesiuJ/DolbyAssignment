@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Windows.Devices.Enumeration;
@@ -17,6 +18,15 @@ namespace SoundChecker.Uwp.Core.Services
         {
             var audioSelector = MediaDevice.GetAudioRenderSelector();
             var outputDevices = await DeviceInformation.FindAllAsync(audioSelector);
+
+            var spatialAudioInformation = new List<SpatialAudioDeviceConfiguration>();
+            foreach (var outputDevice in outputDevices)
+            {
+                var spatialAudioDevice = SpatialAudioDeviceConfiguration.GetForDeviceId(outputDevice.Id);
+                spatialAudioInformation.Add(spatialAudioDevice);
+            }
+
+            var dupa = spatialAudioInformation;
             _currentDevice = SpatialAudioDeviceConfiguration.GetForDeviceId(outputDevices.First().Id);
         }
     }

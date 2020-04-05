@@ -28,7 +28,9 @@ namespace SoundChecker.Uwp.Core.Services
 
         private void CurrentDeviceOnConfigurationChanged(SpatialAudioDeviceConfiguration sender, object args)
         {
+            _currentDevice.ConfigurationChanged -= CurrentDeviceOnConfigurationChanged;
             _currentDevice = sender;
+            SubscribeToAudioEvents();
             var atmosSupport = VerifyAtmosSupport(_currentDevice);
             DolbyAtmosAvailabilityChanged.Invoke(this, atmosSupport);
         }
