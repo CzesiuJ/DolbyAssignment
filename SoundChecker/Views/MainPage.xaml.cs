@@ -1,19 +1,16 @@
 ﻿using System;
 using Windows.Devices.Enumeration;
 using Windows.Media.Devices;
-using MvvmCross.Platforms.Uap.Views;
-using MvvmCross.ViewModels;
-using SoundChecker.Core.ViewModels;
+using Windows.UI.Xaml.Controls;
+using SoundChecker.ViewModels;
 
 namespace SoundChecker.Views
 {
-    [MvxViewFor(typeof(MainPageViewModel))]
-    public sealed partial class MainPageView : MvxWindowsPage
+    public sealed partial class MainPage : Page
     {
-        public MainPageView()
+        public MainPage()
         {
             InitializeComponent();
-            Dupa();
         }
 
         public new MainPageViewModel ViewModel => DataContext as MainPageViewModel;

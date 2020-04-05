@@ -122,7 +122,10 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\Headset\HeadsetConfiguration.cs" />
+    <Compile Include="Services\Headset\IHeadsetConfiguration.cs" />
+    <Compile Include="Services\ISoundSettingsLauncher.cs" />
     <Compile Include="Services\SettingsLauncher.cs" />
+    <Compile Include="Services\Speaker\ISpeakerConfiguration.cs" />
     <Compile Include="Services\Speaker\SpeakerConfiguration.cs" />
     <EmbeddedResource Include="Properties\SoundChecker.Uwp.Core.rd.xml" />
   </ItemGroup>
@@ -132,12 +135,6 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup />
-  <ItemGroup>
-    <ProjectReference Include="..\SoundChecker.Core\SoundChecker.Core.csproj">
-      <Project>{fc530118-5434-4b75-9333-c0b61e9fd46b}</Project>
-      <Name>SoundChecker.Core</Name>
-    </ProjectReference>
-  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

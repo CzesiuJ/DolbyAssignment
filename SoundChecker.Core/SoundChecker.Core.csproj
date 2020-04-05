@@ -8,9 +8,4 @@
     <PackageReference Include="MvvmCross" Version="6.4.2" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Models\Headset\" />
-    <Folder Include="Models\Speaker\" />
-  </ItemGroup>
-
 </Project>

@@ -1,10 +1,9 @@
-﻿using System.Threading.Tasks;
-using MvvmCross.ViewModels;
-using SoundChecker.Core.Services.Headset;
+﻿using Prism.Windows.Mvvm;
+using SoundChecker.Uwp.Core.Services.Headset;
 
-namespace SoundChecker.Core.ViewModels
+namespace SoundChecker.ViewModels
 {
-    public class MainPageViewModel : MvxViewModel
+    public class MainPageViewModel : ViewModelBase
     {
         private readonly IHeadsetConfiguration _headsetConfiguration;
         private bool _isHeadsetButtonChecked;

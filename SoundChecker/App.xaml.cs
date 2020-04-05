@@ -1,19 +1,32 @@
-﻿using MvvmCross.Core;
-using MvvmCross.Platforms.Uap.Views;
-using SoundChecker.Core;
+﻿using System.Threading.Tasks;
+using Windows.ApplicationModel.Activation;
+using Microsoft.Practices.Unity;
+using Prism.Unity.Windows;
+using SoundChecker.Uwp.Core.Services;
+using SoundChecker.Uwp.Core.Services.Headset;
+using SoundChecker.Uwp.Core.Services.Speaker;
 
 namespace SoundChecker
 {
-    partial class App : MvxApplication
+    public sealed partial class App : PrismUnityApplication
     {
         public App()
         {
             InitializeComponent();
         }
 
-        protected override void RegisterSetup()
+        protected override void ConfigureContainer()
         {
-            this.RegisterSetupType<Setup<CoreApp>>();
+            Container.RegisterType<IHeadsetConfiguration, HeadsetConfiguration>();
+            Container.RegisterType<ISpeakerConfiguration, SpeakerConfiguration>();
+            Container.RegisterType<ISoundSettingsLauncher, SettingsLauncher>();
+            base.ConfigureContainer();
+        }
+
+        protected override Task OnLaunchApplicationAsync(LaunchActivatedEventArgs args)
+        {
+            NavigationService.Navigate("Main", null);
+            return Task.FromResult(true);
         }
     }
 }

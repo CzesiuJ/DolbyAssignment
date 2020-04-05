@@ -1,12 +1,13 @@
-﻿<mvvmc:MvxWindowsPage
-    x:Class="SoundChecker.Views.MainPageView"
+﻿<Page
+    x:Class="SoundChecker.Views.MainPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:SoundChecker.Views"
     xmlns:themes="using:SoundChecker.Views.Themes"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:mvvmc="using:MvvmCross.Platforms.Uap.Views"
+    xmlns:mvvm="using:Prism.Windows.Mvvm"
+    mvvm:ViewModelLocator.AutoWireViewModel="True"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
     <Page.Resources>
@@ -40,4 +41,4 @@
         <local:SpeakerConfigView Grid.Row="1" Visibility="{x:Bind ViewModel.IsSpeakerButtonChecked, Mode=OneWay}" />
         <local:HeadsetConfigView Grid.Row="1" Visibility="{x:Bind ViewModel.IsHeadsetButtonChecked, Mode=OneWay}" />
     </Grid>
-</mvvmc:MvxWindowsPage>
+</Page>

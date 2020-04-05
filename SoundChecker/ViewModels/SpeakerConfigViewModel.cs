@@ -1,7 +1,8 @@
-﻿using SoundChecker.Core.Services;
-using SoundChecker.Core.Services.Speaker;
+﻿using SoundChecker.Core.ViewModels;
+using SoundChecker.Uwp.Core.Services;
+using SoundChecker.Uwp.Core.Services.Speaker;
 
-namespace SoundChecker.Core.ViewModels
+namespace SoundChecker.ViewModels
 {
     public class SpeakerConfigViewModel : ConfigViewModelBase
     {

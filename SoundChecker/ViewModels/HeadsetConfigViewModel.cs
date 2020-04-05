@@ -1,8 +1,8 @@
-﻿using System.Threading.Tasks;
-using SoundChecker.Core.Services;
-using SoundChecker.Core.Services.Headset;
+﻿using SoundChecker.Core.ViewModels;
+using SoundChecker.Uwp.Core.Services;
+using SoundChecker.Uwp.Core.Services.Headset;
 
-namespace SoundChecker.Core.ViewModels
+namespace SoundChecker.ViewModels
 {
     public class HeadsetConfigViewModel : ConfigViewModelBase
     {

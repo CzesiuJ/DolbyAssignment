@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace SoundChecker.Core.Services.Headset
+namespace SoundChecker.Uwp.Core.Services.Headset
 {
     public interface IHeadsetConfiguration
     {
