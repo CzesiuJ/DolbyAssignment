@@ -6,10 +6,6 @@ namespace SoundChecker.Core.ViewModels
     {
         private bool _isAtmosReadyToUse;
 
-        public HeadsetConfigViewModel()
-        {
-        }
-
         public bool IsAtmosReadyToUse
         {
             get => _isAtmosReadyToUse;

@@ -9,7 +9,6 @@
     d:DesignHeight="300"
     d:DesignWidth="400">
 
-    <Grid>
-
+    <Grid Background="Red">
     </Grid>
 </UserControl>

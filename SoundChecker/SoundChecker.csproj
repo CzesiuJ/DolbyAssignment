@@ -130,8 +130,17 @@
     <Compile Include="Views\SpeakerConfigView.xaml.cs">
       <DependentUpon>SpeakerConfigView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Themes\CommonTheme.xaml.cs">
+      <DependentUpon>CommonTheme.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Themes\HeadsetConfigTheme.xaml.cs">
+      <DependentUpon>HeadsetConfigTheme.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Themes\MainPageTheme.xaml.cs">
       <DependentUpon>MainPageTheme.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Themes\SpeakerConfigTheme.xaml.cs">
+      <DependentUpon>SpeakerConfigTheme.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -197,7 +206,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\Themes\HeadsetConfigTheme.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\Themes\MainPageTheme.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Themes\SpeakerConfigTheme.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
