@@ -130,6 +130,9 @@
     <Compile Include="Views\SpeakerConfigView.xaml.cs">
       <DependentUpon>SpeakerConfigView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Themes\MainPageTheme.xaml.cs">
+      <DependentUpon>MainPageTheme.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -176,9 +179,7 @@
       <Name>SoundChecker.Uwp.Core</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Infrastructure\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Page Include="Views\HeadsetConfigView.xaml">
       <SubType>Designer</SubType>
@@ -189,6 +190,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\SpeakerConfigView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Themes\MainPageTheme.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
