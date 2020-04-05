@@ -4,8 +4,22 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:SoundChecker.Views.Themes">
 
-    <Style x:Key="DefaultHeaderStyle" TargetType="TextBlock">
+    <SolidColorBrush x:Key="DefaultTextColor" Color="White"></SolidColorBrush>
+
+    <Style x:Key="RootContainerStyle" TargetType="Grid">
+        <Setter Property="Margin" Value="10" />
     </Style>
+
+    <Style x:Key="DefaultHeaderStyle" TargetType="TextBlock">
+        <Setter Property="Foreground" Value="{StaticResource DefaultTextColor}"></Setter>
+        <Setter Property="TextWrapping" Value="WrapWholeWords"></Setter>
+        <Setter Property="FontSize" Value="35"></Setter>
+    </Style>
+
     <Style x:Key="DefaultDescriptionStyle" TargetType="TextBlock">
+        <Setter Property="Foreground" Value="{StaticResource DefaultTextColor}"></Setter>
+        <Setter Property="FontSize" Value="25"></Setter>
+        <Setter Property="Opacity" Value="0.5"></Setter>
+        <Setter Property="TextWrapping" Value="WrapWholeWords"></Setter>
     </Style>
 </ResourceDictionary>

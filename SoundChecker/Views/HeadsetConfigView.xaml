@@ -18,14 +18,14 @@
         </ResourceDictionary>
     </UserControl.Resources>
 
-    <Grid Background="Red">
+    <Grid Style="{StaticResource RootContainerStyle}">
         <Grid.RowDefinitions>
             <RowDefinition />
             <RowDefinition />
             <RowDefinition />
         </Grid.RowDefinitions>
-        <TextBlock Grid.Row="0" Style="{StaticResource DefaultHeaderStyle}" />
+        <TextBlock Grid.Row="0" Style="{StaticResource DefaultHeaderStyle}" x:Uid="Headset" />
 
-        <TextBlock Grid.Row="2" Style="{StaticResource DefaultDescriptionStyle}" />
+        <TextBlock Grid.Row="2" Style="{StaticResource DefaultDescriptionStyle}" x:Uid="HeadsetDescription" />
     </Grid>
 </UserControl>
