@@ -1,0 +1,21 @@
+﻿<UserControl
+    x:Class="SoundChecker.Views.Controls.ReadyToUseDisplayPanel"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SoundChecker.Views.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="50"
+    d:DesignWidth="400">
+
+    <!--TODO : separate style-->
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="4*" />
+        </Grid.ColumnDefinitions>
+        <SymbolIcon Symbol="Emoji" Grid.Column="0" VerticalAlignment="Center" Foreground="Green" />
+        <TextBlock x:Uid="ReadyToUse" Grid.Column="1" VerticalAlignment="Center" Padding="10 0 0 0" />
+    </Grid>
+</UserControl>

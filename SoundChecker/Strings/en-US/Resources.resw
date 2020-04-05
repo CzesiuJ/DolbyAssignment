@@ -121,12 +121,18 @@
     <value>Dolby Atmos for Headphones</value>
   </data>
   <data name="HeadsetDescription.Text" xml:space="preserve">
-        <value>Delivers a premium, immersive audio experience through any set of headphones on up to 10 devices</value>
+    <value>Delivers a premium, immersive audio experience through any set of headphones on up to 10 devices</value>
+  </data>
+  <data name="ReadyToUse.Text" xml:space="preserve">
+    <value>Ready to use</value>
+  </data>
+  <data name="Setup.Content" xml:space="preserve">
+    <value>Setup</value>
   </data>
   <data name="Speakers.Text" xml:space="preserve">
     <value>Dolby Atmos for Home Theater</value>
   </data>
   <data name="SpeakersDescription.Text" xml:space="preserve">
-       <value>Delivers powerful, moving audio to your Dolby Atmos home theater, sound bar, or TV</value>
+    <value>Delivers powerful, moving audio to your Dolby Atmos home theater, sound bar, or TV</value>
   </data>
 </root>

@@ -2,9 +2,11 @@
     x:Class="SoundChecker.Views.Themes.CommonTheme"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:SoundChecker.Views.Themes">
+    xmlns:local="using:SoundChecker.Views.Themes"
+    xmlns:infrastructure="using:SoundChecker.Infrastructure">
 
     <SolidColorBrush x:Key="DefaultTextColor" Color="White"></SolidColorBrush>
+    <infrastructure:InvertedBooleanToVisibilityConverter x:Key="InvertedBooleanToVisibilityConverter" />
 
     <Style x:Key="RootContainerStyle" TargetType="Grid">
         <Setter Property="Margin" Value="10" />
@@ -21,5 +23,8 @@
         <Setter Property="FontSize" Value="25"></Setter>
         <Setter Property="Opacity" Value="0.5"></Setter>
         <Setter Property="TextWrapping" Value="WrapWholeWords"></Setter>
+    </Style>
+
+    <Style x:Key="SetupButtonStyle" TargetType="Button">
     </Style>
 </ResourceDictionary>

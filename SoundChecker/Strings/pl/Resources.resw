@@ -123,10 +123,16 @@
   <data name="HeadsetDescription.Text" xml:space="preserve">
     <value>Dostarcza niesamowity tekst wymyślony przez dział marketingu, w 10 smakach i zapachach</value>
   </data>
+  <data name="ReadyToUse.Text" xml:space="preserve">
+    <value>Jest gites majonez</value>
+  </data>
+  <data name="Setup.Content" xml:space="preserve">
+      <value>Ogarnij</value>
+  </data>
   <data name="Speakers.Text" xml:space="preserve">
     <value>Dolby Atmos dla Kina Domowego</value>
   </data>
   <data name="SpeakersDescription.Text" xml:space="preserve">
-       <value>Zapewnia niesamowite wrażenia wizualne i dotykowe, bo nie mam pojęcia, co piszę</value>
+    <value>Zapewnia niesamowite wrażenia wizualne i dotykowe, bo nie mam pojęcia, co piszę</value>
   </data>
 </root>

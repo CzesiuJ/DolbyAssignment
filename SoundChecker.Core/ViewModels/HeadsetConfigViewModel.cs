@@ -1,15 +1,16 @@
-﻿using MvvmCross.ViewModels;
+﻿using System.Threading.Tasks;
+using SoundChecker.Core.Services;
+using SoundChecker.Core.Services.Headset;
 
 namespace SoundChecker.Core.ViewModels
 {
-    public class HeadsetConfigViewModel : MvxViewModel
+    public class HeadsetConfigViewModel : ConfigViewModelBase
     {
-        private bool _isAtmosReadyToUse;
+        private readonly IHeadsetConfiguration _headsetConfiguration;
 
-        public bool IsAtmosReadyToUse
+        public HeadsetConfigViewModel(IHeadsetConfiguration headsetConfiguration, ISoundSettingsLauncher soundSettingsLauncher) : base(soundSettingsLauncher)
         {
-            get => _isAtmosReadyToUse;
-            set => SetProperty(ref _isAtmosReadyToUse, value);
+            _headsetConfiguration = headsetConfiguration;
         }
     }
 }

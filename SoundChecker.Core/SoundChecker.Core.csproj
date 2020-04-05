@@ -11,7 +11,6 @@
   <ItemGroup>
     <Folder Include="Models\Headset\" />
     <Folder Include="Models\Speaker\" />
-    <Folder Include="Services\Headset\" />
   </ItemGroup>
 
 </Project>

@@ -2,8 +2,7 @@
 
 namespace SoundChecker.Core.Services.Speaker
 {
-    public interface ISoundSettingsLauncher
+    public interface ISpeakerConfiguration
     {
-        Task LanuchSoundSettingsAsync();
     }
 }

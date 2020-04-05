@@ -1,22 +1,15 @@
-﻿using MvvmCross.Commands;
-using MvvmCross.ViewModels;
+﻿using SoundChecker.Core.Services;
 using SoundChecker.Core.Services.Speaker;
 
 namespace SoundChecker.Core.ViewModels
 {
-    public class SpeakerConfigViewModel : MvxViewModel
+    public class SpeakerConfigViewModel : ConfigViewModelBase
     {
-        private readonly ISoundSettingsLauncher _soundSettingsLauncher;
+        private readonly ISpeakerConfiguration _speakerConfiguration;
 
-        public SpeakerConfigViewModel(ISoundSettingsLauncher soundSettingsLauncher)
+        public SpeakerConfigViewModel(ISpeakerConfiguration speakerConfiguration, ISoundSettingsLauncher soundSettingsLauncher) : base(soundSettingsLauncher)
         {
-            _soundSettingsLauncher = soundSettingsLauncher;
-        }
-
-        public IMvxCommand LaunchSettingsCommand => new MvxCommand(LaunchSettings);
-
-        private void LaunchSettings()
-        {
+            _speakerConfiguration = speakerConfiguration;
         }
     }
 }
